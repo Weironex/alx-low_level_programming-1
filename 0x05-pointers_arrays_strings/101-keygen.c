@@ -5,10 +5,10 @@
 
 
 /**
- *  * main - program that generates a random valid
- *   * password for the program 101-crackme
- *    * Return: Always 0 (Success)
- *     */
+ * main - program that generates a random valid
+ * password for the program 101-crackme
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 
@@ -34,23 +34,23 @@ int main(void)
 
 		pass[i] = rand() % 78;
 
-												   sum += (pass[i] + '0');
+		sum += (pass[i] + '0');
 
-												   putchar(pass[i] + '0');
+		putchar(pass[i] + '0');
 
-												   if ((2772 - sum) - '0' < 78)
+		if ((2772 - sum) - '0' < 78)
 
-											             {
+		{
 
-														n = 2772 - sum - '0';
+			n = 2772 - sum - '0';
 
-																								   sum += n;
+			sum += n;
 
-																								   putchar(n + '0');
+			putchar(n + '0');
 
-																								   break;
+			break;
 
-																																	  }
+		}
 
 	}
 

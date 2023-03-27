@@ -3,10 +3,10 @@
 #include <string.h>
 
 /**
- *  * puts_half - reverses a string
- *   * @str:  pointer to the string
- *    * Return: Always 0
- *     */
+ * puts_half - reverses a string
+ * @str:  pointer to the string
+ * Return: Always 0
+ */
 void puts_half(char *str)
 {
 
