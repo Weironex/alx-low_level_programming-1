@@ -30,7 +30,7 @@ int num_prime(int n, int i)
  * Return: recursion
  */
 
-int num_prime(int n)
+int is_prime_number(int n)
 {
 	if ((!(n % 2) && n != 2) || n < 2)
 	{
