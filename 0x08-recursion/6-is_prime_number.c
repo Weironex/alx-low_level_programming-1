@@ -1,28 +1,7 @@
 #include "main.h"
 int num_prime(int n, int i);
 /**
- * is_prime_number - prime
- * @n: integer param
- * Return: recursion
- */
-
-int is_prime_number(int n)
-{
-	if (n < 2)
-	{
-		return (0);
-	}
-	else if (n == 2)
-	{
-		return (1);
-	}
-
-	return (is_prime_number(n, 2));
-
-}
-
-/**
- * num_prime - number is prime?
+ * num_prime -number is  prime?
  * @n: integer param
  * @i: integer param
  * Return: bool
@@ -30,14 +9,37 @@ int is_prime_number(int n)
 
 int num_prime(int n, int i)
 {
-	if ((i * i) > n)
+	if (i % n == 0)
+	{
+		return (0);
+	}
+	else if (i / 2 > n)
+	{
+		return (num_prime(n + 2, 1));
+	}
+	else
 	{
 		return (1);
 	}
-	if (n % i == 0)
+
+}
+
+/**
+ * is_prime_number - number is prime?
+ * @n: integer param
+ * Return: recursion
+ */
+
+int num_prime(int n)
+{
+	if ((!(n % 2) && n != 2) || n < 2)
 	{
 		return (0);
 	}
 
-	return (num_prime(n, i + 1));
+	else
+	{
+		return (num_prime(3, n));
+	}
+
 }
