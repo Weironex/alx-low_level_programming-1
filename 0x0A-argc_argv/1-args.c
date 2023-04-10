@@ -1,4 +1,4 @@
-#include <stdio.h.>
+#include <stdio.h>
 /**
  * main - prints its name followed by a new line
  * @argc: n args
@@ -11,9 +11,8 @@ int main(int argc, char **argv)
 {
 	(void)argv;
 
-	int num_of_args = argc - 1;
 
-	printf("%d\n", num_of_args);
+	printf("%d\n", argc - 1);
 
 	return (0);
 
