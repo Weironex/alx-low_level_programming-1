@@ -4,8 +4,9 @@
 #include <ctype.h>
 /**
  * main - adds two positive numbers
- * @argc: r args
+ * @argc: n args
  * @argv: arr args
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
