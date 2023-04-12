@@ -11,7 +11,7 @@ int len(char *str)
 	if (str != NULL)
 	{
 		while (str[len])
-			len++
+			len++;
 	}
 
 	return (len);
@@ -27,7 +27,8 @@ int len(char *str)
 char *argstostr(int ac, char **av)
 {
 	char *new_string = NULL;
-	int k = 0, i = ac, j, sum = 0, temp = 0;
+
+	int k = 0, j = ac, sum = 0, temp = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
