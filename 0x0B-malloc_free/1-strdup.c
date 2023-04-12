@@ -6,28 +6,23 @@
  */
 char *_strdup(char *str)
 {
-	int i = 1, j = 0;
-	char *s;
+	char *dup;
+	int i, len = 0;
 
 	if (str == NULL)
-	{
-		return (NULL);
-	}
-	while (str[i])
-		i++;
-	s = (char *)malloc(1 * sizeof(char) + 1);
-
-	if (s == NULL)
 		return (NULL);
 
-	while (j < i)
-	{
-		s[j] = str[j];
-		j++;
-	}
+	while (str[len] != '\0')
+		len++;
 
-	s[j] = '\0';
+	dup = (char *)malloc((sizeof(char) * len) + 1);
+	if (dup == NULL)
+		return (NULL);
 
-	return (s);
+	for (i = 0; i < len; i++)
+		dup[i] = str[i];
+	dup[len] = '\0';
+
+	return (dup);
 
 }
